@@ -1,0 +1,20 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+div#wrapper {
+  border: 1px solid red;
+  margin: auto;
+  width: 700px;
+  padding: 20px 0 0 220px;
+  position: relative;
+}
+div#content {
+  border: 1px solid blue;
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+}
