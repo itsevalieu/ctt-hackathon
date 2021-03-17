@@ -1,9 +1,17 @@
 html {
   height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 body {
   height: 100%;
   margin: 0;
+  background: #000;
+  color: #fff;
 }
 div#wrapper {
   border: 1px solid red;
@@ -17,4 +25,24 @@ div#content {
   position: relative;
   overflow: hidden;
   height: 700px;
+}
+
+/* Menu */
+div#menu {
+  /* border: 1px solid purple; */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+/* Locations */
+.location {
+  border: 1px solid red;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+.location:hover {
+  text-decoration: underline;
+}
+.active {
+  text-decoration: underline;
 }

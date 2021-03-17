@@ -1,31 +1,23 @@
+import Engine from './engine.js';
+
 (function() {
-    const Engine = window.Engine = {
-        site:'cats',
-        init: function() {
-            console.log("Hey");
-            let content = document.getElementById('content');
-            let btn = document.createElement('button');
-            btn.innerHTML = "turn on radio";
-            btn.classList.add('button');
-            btn.addEventListener('click', () => {
-                console.log("clicked");
-                let notifications = document.getElementById('notifications');
-                let notification = document.createElement('div');
-                notification.classList.add('notification');
-                notification.innerHTML = "new thingama bobba";
-                notifications.prepend(notification);
-            })
-            content.appendChild(btn);
+    console.log("Game start, instantiating engine");
+    const engine = new Engine({});
 
+    const startGame = function() {
+        engine.init();
+    }
 
-                
-        }
-    };
-    console.log(Engine);
+    startGame();
+
 })();
 
-const startGame = function() {
-    Engine.init();
-}
 
-startGame();
+
+/**
+ * On window load, 
+ * 1.) Check if there's any saved gameState in localStorage
+ * 2.) If yes, set localStorage.gameState to global var State
+ * 3.) If no, set up initial game localStorage.gameState
+ *  
+ */
