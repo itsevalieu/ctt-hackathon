@@ -4,11 +4,26 @@
 
 - Prologue
 - Location management
+  - React routing?
+    - Keep track of history as well
+  - Switching locations should initiate a call to api for that location
+    - Returns update on state for npcs, available actions,
 - Event driven text Input/Output via terminal and log
+  - Timed-events
+  - Output is triggered by timed-events, random-events, and input by user
+  - Input is made via action palettte buttons or registered text commands
+  - Input via registered text commands:
+    - parse text separated by spaces into arrays, compare words for registered actions
 - Inventory management (resource management)
+  - list of items available for prologue, object list
+  - OOP methods to init, add, subtract, count, list
 - State tracker
+  - init, get, parse, update, delete, list, count
 - Action palette
+  - possible actions via location or discovery
 - Real-time events
+  - API endpoints
+  - local time
 
 ## Icebox Features
 
