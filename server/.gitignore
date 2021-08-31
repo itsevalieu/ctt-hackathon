@@ -105,3 +105,5 @@ dist
 
 todo/
 todo/*
+cypress/screenshots/
+cypress/videos/
