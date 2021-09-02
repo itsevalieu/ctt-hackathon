@@ -17,7 +17,7 @@ class ClockSubject {
       const clock = this.fetchClock();
       this.notify(clock.time);
       console.log("clock", clock.time);
-    }, 1000);
+    }, 3000);
   }
   public cleanUpdates() {
     if (this.intervalId) {
@@ -27,10 +27,13 @@ class ClockSubject {
   }
   public fetchClock() {
     const dateTime = new Date();
-    const hours = dateTime.getHours();
-    const minutes = dateTime.getMinutes();
-    // console.log("dateTime", dateTime.getHours());
-    return { time: `${hours}:${minutes}` };
+    let hours = dateTime.getHours().toString();
+    let minutes = dateTime.getMinutes().toString();
+    return {
+      time: `${hours.length > 1 ? hours : `0${hours}`}:${
+        minutes.length > 1 ? minutes : `0${minutes}`
+      }`,
+    };
   }
   private notify(time: String) {
     this.observers.forEach((observer) => observer(time));
