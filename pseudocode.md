@@ -54,6 +54,13 @@
   - Current Monies
 - Action Palette
   - Buttons
+    - Gather
+    - Defend
+    - Attack
+    - Pickpocket
+    - Build
+    - Track
+    - Investigate
 
 ## Backend
 
