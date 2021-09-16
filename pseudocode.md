@@ -74,3 +74,14 @@ API calls via event/actions
    - /npcs
    - /crows
    - /event (conditional)
+
+## High Level Architecture
+
+- Iterative
+- Caching -> CDN, between app server and db
+- Monolithic
+- Authentication? JWToken? Passport? Sessions?
+- DB -> MongoDB, noSQL
+- REST API
+- Cross functional requirements: SEO, accessible, analytics, performance
+- scale? horizontal, replicate servers, maybe use containers
