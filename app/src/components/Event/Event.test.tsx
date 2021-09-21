@@ -11,4 +11,5 @@ describe("Event", () => {
   test.todo("should render event message at the given time");
   test.todo("should render event message at the hour");
   test.todo("should update game state");
+  test.todo("should render event based on action");
 });
