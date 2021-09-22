@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import clockSubject, { ClockObserver } from "../../helpers/ClockSubject";
 
-export default function Event() {
+export default function Action() {
   const [currentTime, setCurrentTime] = useState<String>();
   const onTimeUpdated: ClockObserver = (time: String) => {
     setCurrentTime(time);
@@ -15,7 +15,7 @@ export default function Event() {
   }, []);
   return (
     <section>
-      <div>Event</div>
+      <div>Action</div>
       Clock: <span data-testid="current-time">{currentTime}</span>
     </section>
   );
