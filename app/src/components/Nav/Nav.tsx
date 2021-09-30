@@ -3,7 +3,6 @@ export interface LocationProps {
   link: string;
   active: boolean;
 }
-
 export interface ILocations {
   locations: LocationProps[];
 }

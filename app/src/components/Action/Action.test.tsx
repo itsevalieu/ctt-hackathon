@@ -1,11 +1,25 @@
 import { render, screen } from "@testing-library/react";
-import Action from "./Action";
+import Action, { ActionProps } from "./Action";
 
+let actions: ActionProps[];
+beforeEach(() => {
+  actions = [
+    {
+      name: "gather",
+    },
+    {
+      name: "build",
+    },
+    {
+      name: "radio",
+    },
+  ];
+});
 describe("Action", () => {
   test("should render actions", () => {
-    render(<Action />);
-    const linkElement = screen.getByText(/Action/i);
-    expect(linkElement).toBeInTheDocument();
+    render(<Action actions={actions} />);
+    const textElement = screen.getByText(/gather/i);
+    expect(textElement).toBeInTheDocument();
   });
   test.todo("should subscribe to clock");
   test.todo("should show action text");
