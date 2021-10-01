@@ -13,11 +13,11 @@ function App() {
   const actions = Actions.data;
   return (
     <div className="App">
-      <Log />
-      <Nav locations={locations} />
       <Clock />
-      <Event />
+      <Nav locations={locations} />
       <Action actions={actions} />
+      <Log />
+      <Event />
     </div>
   );
 }
