@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export interface LocationProps {
   name: string;
   link: string;
@@ -7,9 +9,16 @@ export interface ILocations {
   locations: LocationProps[];
 }
 export default function Nav({ locations }: ILocations) {
+  const Nav = styled.nav`
+    // border: 1px solid red;
+    display: flex;
+    a {
+      padding: 5px;
+    }
+  `;
   //if locations are active, render the a tag for it
   return (
-    <nav>
+    <Nav>
       {locations.map((location, index) =>
         location.active ? (
           <a key={index} href={`/${location.link}`}>
@@ -17,6 +26,6 @@ export default function Nav({ locations }: ILocations) {
           </a>
         ) : null
       )}
-    </nav>
+    </Nav>
   );
 }

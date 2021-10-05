@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import clockSubject, { ClockObserver } from "../../helpers/ClockSubject";
+import styled from "styled-components";
 export default function Clock() {
+  const ClockSection = styled.section`
+    border-bottom: 1px solid #fff;
+    text-align: right;
+    padding: 5px;
+  `;
+
   const [currentTime, setCurrentTime] = useState<String>();
   const onTimeUpdated: ClockObserver = (time: String) => {
     setCurrentTime(time);
@@ -13,8 +20,8 @@ export default function Clock() {
     return () => clockSubject.unsubscribe(onTimeUpdated);
   }, []);
   return (
-    <section>
-      Clock: <span data-testid="current-time">{currentTime}</span>
-    </section>
+    <ClockSection>
+      <span data-testid="current-time">{currentTime}</span>
+    </ClockSection>
   );
 }

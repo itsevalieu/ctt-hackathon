@@ -1,4 +1,4 @@
-import "./App.css";
+import styled from "styled-components";
 import Action from "./components/Action/Action";
 import Clock from "./components/Clock/Clock";
 import Event from "./components/Event/Event";
@@ -11,14 +11,27 @@ import Actions from "./data/actions";
 function App() {
   const locations = Locations.data;
   const actions = Actions.data;
+  const Main = styled.main`
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  `;
+  const Wrapper = styled.section`
+    padding: 2em;
+  `;
   return (
-    <div className="App">
-      <Clock />
-      <Nav locations={locations} />
-      <Action actions={actions} />
-      <Log />
-      <Event />
-    </div>
+    <Main>
+      <Wrapper>
+        <Clock />
+        <Nav locations={locations} />
+        <Action actions={actions} />
+        <Log />
+        <Event />
+      </Wrapper>
+    </Main>
   );
 }
 
